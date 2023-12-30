@@ -15,35 +15,16 @@ public class TabEx4 {
             }
         }
 
-        System.out.println("----------- M = A -----------");
-        show(a);
-        System.out.println("----------- M = B -----------");
-        show(b);
-        int[][] s = sum(a,b);
-
-        System.out.println("----------- M = S -----------");
-        show(s);
-    }
-
-    public static void show(int[][] M){
-        for (int i = 0; i < 4; i++) {
-            for (int j = 0; j < 4; j++) {
-                System.out.print(M[i][j] + " ");
-            }
-            System.out.println("");
-        }
-    }
-    public static int[][] sum(int[][] A, int[][] B){
         int[][] M = new int[4][4];
-
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 4; j++) {
+                M[i][j] = a[i][j] + b[i][j];
+                System.out.println(M[i][j]);
+                                            }
+                                    }
 
-                M[i][j] = A[i][j] + B[i][j];
 
-            }
-
-        }
-        return M;
     }
 }
+
+

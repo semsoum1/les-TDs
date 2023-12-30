@@ -13,11 +13,7 @@ public class TabEx2 {
 
         } while (n != 0);
 
-//        method 1
-//        for (int j = i+1; j < 50; j++) {
-//            System.out.print(tab[j] + " ");
-//
-//        }
+
         for (int v :
                 tab) {
             if (start)

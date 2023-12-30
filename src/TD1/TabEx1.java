@@ -14,18 +14,11 @@ public class TabEx1 {
         }
         int max = tab[0];
         int min = tab[0];
-//        for (int i = 0; i < 50; i++) {
-//            if (tab[i] > max) max = tab[i];
-//            if (tab[i] < min) min = tab[i];
-//        }
-// foreach version   ;  tab[i]  <==> e
-        for (int e : tab) {
-            if (e > max) max = e;
-            if (e < min) min = e;
-            System.out.println("This is the value from foreach : " + e);
-        }
+       for (int i = 0; i < 50; i++) {
+           if (tab[i] > max) max = tab[i];
+           if (tab[i] < min) min = tab[i];
+       }
+       System.out.println("max =" + max + "  min =" + min);
+    }}
 
-        System.out.println("max =" + max + "  min =" + min);
-    }
 
-}
