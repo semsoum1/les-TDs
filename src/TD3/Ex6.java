@@ -2,7 +2,7 @@ package TD3;
 
 public class Ex6 {
     public static void main(String[] args) {
-        Disque d = new Disque(new Point(1,2), 3);
+        Disque d = new Disque(1, 3);
         Rectangle r = new Rectangle(5, 3);
         showDisque(d);
         showRectange(r);
@@ -35,24 +35,22 @@ abstract class Figure {
 
     @Override
     public String toString() {
-        return "Figure{" +
-                "nom='" + nom + '\'' +
-                '}';
+        return "Figure{" + "nom='" + nom + '\'' + '}';
     }
 }
 
 class Disque extends Figure{
-    Point centre;
+    double centre;
     double rayon;
 
     public Disque() {
     }
 
-    public Disque(Point centre, double rayon) {
+    public Disque(double centre, double rayon) {
         this.centre = centre;
         this.rayon = rayon;
     }
-    public Disque(Point centre, double rayon,String nom) {
+    public Disque(double centre, double rayon,String nom) {
         this(centre,rayon);
         this.nom = nom;
     }
@@ -67,7 +65,21 @@ class Disque extends Figure{
         return Math.pow(this.rayon, 2) * 3.24;
     }
 
+    public double getCentre() {
+        return centre;
+    }
 
+    public void setCentre(double centre) {
+        this.centre = centre;
+    }
+
+    public double getRayon() {
+        return rayon;
+    }
+
+    public void setRayon(double rayon) {
+        this.rayon = rayon;
+    }
 }
 
 class Rectangle extends Figure{
@@ -86,6 +98,8 @@ class Rectangle extends Figure{
         this.nom = nom;
     }
 
+
+
     @Override
     public double getPerimeter() {
         return 2*(this.longueur+ this.largeur);
@@ -98,30 +112,6 @@ class Rectangle extends Figure{
 }
 
 
-class Point{
-    private double x,y;
 
-    public Point() {
-    }
 
-    public Point(double x, double y) {
-        this.x = x;
-        this.y = y;
-    }
 
-    public double getX() {
-        return x;
-    }
-
-    public void setX(double x) {
-        this.x = x;
-    }
-
-    public double getY() {
-        return y;
-    }
-
-    public void setY(double y) {
-        this.y = y;
-    }
-}

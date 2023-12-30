@@ -13,7 +13,10 @@ class Vehicule{
         this.nbrPassager = n;
     }
 
-
+    @Override
+    public String toString() {
+       return "le nbrs de passagers est"+nbrPassager;
+    }
 }
 
 class Moto extends Vehicule{
@@ -33,13 +36,12 @@ class Moto extends Vehicule{
 class Avion extends Vehicule{
     private int nbrMoteur;
 
-    public Avion(int nPr) {
-        super(nPr);
+    public Avion(int nbrpassager) {
+        super(nbrpassager);
     }
 
-    public Avion(int nPr, int nbrMoteur) {
-//        super(nPr);
-        this(nPr);
+    public Avion(int nbrpassager, int nbrMoteur) {
+        this(nbrpassager);
         this.nbrMoteur = nbrMoteur;
     }
 }

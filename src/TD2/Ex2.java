@@ -2,12 +2,9 @@ package TD2;
 
 public class Ex2 {
     public static void main(String[] args) {
-        Point a = new Point();
-        a.setNom('A');
-        a.setX(5);
-        a.setY(6);
-        System.out.println(a);
 
+        Point a = new Point(4,5,'A');
+        System.out.println(a);
     }
 }
 
@@ -48,7 +45,7 @@ class Point{
     }
 
     public double norme(){
-        return  Math.sqrt(x*x + Math.pow(this.getY(),2));
+        return  Math.sqrt(x*x + y*y);
     }
 
     @Override

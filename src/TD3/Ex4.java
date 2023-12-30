@@ -69,12 +69,9 @@ class Immeuble extends Batiment {
     public void setNbrAppart(int nbrAppart) {
         this.nbrAppart = nbrAppart;
     }
-}
 
-
-class A extends Maison{
-
-    public A(int nbrCHambres) {
-        super(nbrCHambres);
+    @Override
+    public String toString() {
+        return "adresse: "+super.getAdresse()+ "nombre appart" + getNbrAppart();
     }
 }

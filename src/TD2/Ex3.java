@@ -8,7 +8,7 @@ public class Ex3 {
         Livre l4 = new Livre("One piece", "Oda", 20);
         Livre l5 = new Livre("One piece", "Oda", 20, 1997);
         Livre l6 = new Livre(l5);
-        System.out.println(l1);
+        System.out.println(l6);
 
 
 
@@ -21,32 +21,26 @@ class Livre{
     private double prix;
     private int annee;
 
-    public final int s;
 
-    Livre(){
-        this.s = 3;
-    }
+
+    Livre(){}
     Livre(String titre){
         this();
         this.titre = titre;
     }
 
     Livre(String titre, String auteur){
-//        this.titre = titre;
-        this(titre);
+        this.titre = titre;
         this.auteur = auteur;
     }
 
     Livre(String titre, String auteur , double prix){
-//        this.titre = titre;
-//        this.auteur = auteur;
+
         this(titre, auteur);
         this.prix = prix;
     }
     Livre(String titre, String auteur , double prix, int annee){
-//        this.titre = titre;
-//        this.auteur = auteur;
-//        this.prix = prix;
+
         this(titre,auteur,prix);
         this.annee = annee;
     }
@@ -90,12 +84,6 @@ class Livre{
 
     @Override
     public String toString() {
-        return "Livre{" +
-                "titre='" + titre + '\'' +
-                ", auteur='" + auteur + '\'' +
-                ", prix=" + prix +
-                ", annee=" + annee +
-                ", s=" + s +
-                '}';
+        return "Livre{" + "titre='" + titre + '\'' + ", auteur='" + auteur + '\'' + ", prix=" + prix + ", annee=" + annee + '}';
     }
 }

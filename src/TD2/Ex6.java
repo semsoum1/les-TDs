@@ -2,7 +2,12 @@ package TD2;
 
 public class Ex6 {
     public static void main(String[] args) {
-
+        Banque banque= new Banque(1,5000.75,"AB1200");
+        banque.toString();
+        banque.deposer(500);
+        banque.toString();
+        banque.retirer(200);
+        banque.toString();
     }
 }
 
@@ -17,7 +22,7 @@ class Banque{
         this.cin = cin;
     }
 
-    public void diposer(double somme){
+    public void deposer(double somme){
         this.solde += somme;
     }
     public boolean retirer(double somme){
