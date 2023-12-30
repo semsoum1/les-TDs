@@ -3,19 +3,14 @@ import java.util.Scanner;
 
 public class LoopEx1 {
     public static void main(String[] args) {
-        int n , s=0 , f=1;
         Scanner scanner = new Scanner(System.in);
-        System.out.println("The N:");
-        n = scanner.nextInt();
-        for (int i = 1; i <=n ; i++) {
-            f *= i;
-            if (i%2!=0){
-                s += i;
-            }
+
+        System.out.print("Entrez un entier naturel N : ");
+        int N = scanner.nextInt();
+        int fact=1;
+        for (int i = 2; i <= N; i++) {
+            fact *= i;
         }
-
-        System.out.println("f= "+ f + " s= "+s);
-
-
+        System.out.println(fact);
     }
 }

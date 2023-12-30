@@ -2,24 +2,16 @@ package TD1;
 
 public class LoopEx10 {
     public static void main(String[] args) {
+        System.out.println("Les entiers cubiques de trois chiffres sont :");
 
+        for (int i = 100; i <= 999; i++) {
+            int A = i / 100;
+            int B = (i / 10) % 10;
+            int C = i % 10;
 
-        for (int i = 1; i <= 9; i++) {
-            for (int j = 0; j <= 9; j++) {
-                for (int k = 0; k <= 9; k++) {
-                    int t = (int) (Math.pow(i,3) + Math.pow(j,3) + Math.pow(k,3));
-                    int nbr = Integer.parseInt(""+ i+j+k);
-
-                    if (t == nbr)
-                        System.out.println(
-                                i+"^3 + "+j+" ^3 + "+ k +"^3 ="+t
-                        );
-
-                }
+            if (i == (Math.pow(A, 3) + Math.pow(B, 3) + Math.pow(C, 3))) {
+                System.out.println(i);
             }
         }
-
-
-
     }
 }
